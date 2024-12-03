@@ -26,7 +26,7 @@ const NavigationBar = () => {
         </p>
       </Link>
       <NavigationMenu>
-        <NavigationMenuList className="flex items-center">
+        <NavigationMenuList className="hidden md:flex md:flex-row md:items-center">
           {navLinks.map((link) => (
             <NavigationMenuItem key={link.name}>
               <Link href={link.href}>
