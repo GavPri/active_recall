@@ -18,8 +18,12 @@ const navLinks = [
 ];
 
 const NavigationBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  // handle menu change
+  const handleMenuChange = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div className="w-full h-24 shadow-sm flex justify-between items-center px-4">
       <Link href="/">
@@ -41,8 +45,9 @@ const NavigationBar = () => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="md:hidden text-foreground">
-      {isMenuOpen ? <X /> : <Menu/>}</div>
+      <div className="md:hidden text-foreground" onClick={handleMenuChange}>
+        {isMenuOpen ? <X /> : <Menu />}
+      </div>
     </div>
   );
 };
