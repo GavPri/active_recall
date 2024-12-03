@@ -12,22 +12,24 @@ import React from "react";
 // links to map through
 
 const navLinks = [
-  {name : 'Sign Up', href: 'signup'},
-  {name: 'Login', href: 'login'}
-]
+  { name: "Sign Up", href: "signup" },
+  { name: "Login", href: "login" },
+];
 
 const NavigationBar = () => {
   return (
     <div className="w-full h-24 shadow-sm">
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="#">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Sign Up
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
+          {navLinks.map((link) => (
+            <NavigationMenuItem key={link.name}>
+              <Link href={link.href}>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  {link.name}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          ))}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
