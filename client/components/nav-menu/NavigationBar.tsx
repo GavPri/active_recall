@@ -8,6 +8,7 @@ import {
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 // links to map through
 
@@ -40,6 +41,8 @@ const NavigationBar = () => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="md:hidden text-foreground">
+      {isMenuOpen ? <X /> : <Menu/>}</div>
     </div>
   );
 };
