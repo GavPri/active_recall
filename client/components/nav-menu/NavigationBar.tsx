@@ -7,7 +7,7 @@ import {
 } from "@radix-ui/react-navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 // links to map through
 
@@ -17,6 +17,8 @@ const navLinks = [
 ];
 
 const NavigationBar = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <div className="w-full h-24 shadow-sm flex justify-between items-center px-4">
       <Link href="/">
