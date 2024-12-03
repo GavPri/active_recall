@@ -16,7 +16,7 @@ const NavigationBar = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="#">
-              <NavigationMenuLink>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Sign Up
               </NavigationMenuLink>
             </Link>
