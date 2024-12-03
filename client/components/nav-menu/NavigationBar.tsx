@@ -3,7 +3,7 @@ import React from 'react'
 
 const NavigationBar = () => {
   return (
-    <div>NavigationBar</div>
+    <div className='w-full h-24 shadow-sm'>NavigationBar</div>
   )
 }
 
