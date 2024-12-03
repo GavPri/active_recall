@@ -19,6 +19,12 @@ const navLinks = [
 const NavigationBar = () => {
   return (
     <div className="w-full h-24 shadow-sm flex justify-between items-center px-4">
+      <Link href="/">
+        <p className="text-xl font-mono tracking-wider font-thin text-muted-foreground">
+          <span className="italic font-bold text-foreground">A</span>ctive{" "}
+          <span className="italic font-bold text-foreground">R</span>ecall
+        </p>
+      </Link>
       <NavigationMenu>
         <NavigationMenuList className="flex items-center">
           {navLinks.map((link) => (
