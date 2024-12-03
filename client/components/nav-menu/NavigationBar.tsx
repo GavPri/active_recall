@@ -18,9 +18,9 @@ const navLinks = [
 
 const NavigationBar = () => {
   return (
-    <div className="w-full h-24 shadow-sm">
+    <div className="w-full h-24 shadow-sm flex justify-between items-center px-4">
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="flex items-center">
           {navLinks.map((link) => (
             <NavigationMenuItem key={link.name}>
               <Link href={link.href}>
