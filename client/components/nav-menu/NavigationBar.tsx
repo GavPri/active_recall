@@ -9,6 +9,13 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import React from "react";
 
+// links to map through
+
+const navLinks = [
+  {name : 'Sign Up', href: 'signup'},
+  {name: 'Login', href: 'login'}
+]
+
 const NavigationBar = () => {
   return (
     <div className="w-full h-24 shadow-sm">
